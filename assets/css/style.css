@@ -1,0 +1,43 @@
+:root {
+    --vermelha: #e50914;
+    --preta: #141414;
+}
+
+* {
+    font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background: var(--preta);
+}
+
+.logo {
+    color: var(--vermelha);
+    font-family: "Arial Black";
+    text-transform: uppercase;
+}
+
+nav * {
+    line-height: 1.2em;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #b3b3b3;
+}
+
+nav a:not(:last-child) {
+    margin-right: 10px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
