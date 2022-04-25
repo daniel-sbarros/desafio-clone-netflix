@@ -3,36 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fearflix</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Início – Netflix</title>
+    <!-- OWL CAROUSEL SLIDER JQUERY ( https://owlcarousel2.github.io/OwlCarousel2/ ) -->
+    <link rel="stylesheet" href="assets/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl/owl.theme.default.min.css">
+    <script src="assets/owl/jquery.min.js"></script>
+    <script src="assets/owl/owl.carousel.min.js"></script>
+    <!-- ICONES ( https://fontawesome.com/start https://fontawesome.com/icons ) -->
+    <script src="https://kit.fontawesome.com/683206203e.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- https://www.themoviedb.org/?language=pt-BR aula 04-->
+    <!-- https://www.themoviedb.org/?language=pt-BR -->
     <header>
         <div class="container">
             <div class="esquerda">
-                <h2 class="logo">Fearflix</h2>
+                <h2 class="logo"><img src="assets/images/logo_v7.png" alt="Netflix"></h2>
+                <a href="#" id="navegar">
+                    Navegar
+                    <i class="fa-solid fa-caret-down"></i>
+                </a>
                 <nav>
-                    <a href="#">Início</a>
-                    <a href="#">Séries</a>
-                    <a href="#">Filmes</a>
-                    <a href="#">Documentários</a>
+                    <div class="menu">
+                        <a href="">Início</a>
+                        <a href="">Séries</a>
+                        <a href="">Filmes</a>
+                        <a href="">Bombando</a>
+                        <a href="">Minha lista</a>
+                    </div>
                 </nav>
             </div>
             <div class="direita">
-                <span class="icon-search">::before</span>
-                <span class="icon-button-notification">::before</span>
-                <div class="account-dropdown-button">::before</div>
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-bell"></i>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-user"></i>
+                </a>
             </div>
         </div>
     </header>
     <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">A Hora do Pesadelo (1984)</h3>
+                <p class="descricao">
+                    Um grupo de adolescentes tem pesadelos horríveis, onde são atacados por um homem deformado com garras de aço. Ele apenas aparece durante o sono e, para escapar, é preciso acordar. Os crimes vão ocorrendo seguidamente, até que se descobre que o ser misterioso é na verdade Freddy Krueger, um homem que molestou crianças na rua Elm e que foi queimado vivo pela vizinhança. Agora Krueger pode retornar para se vingar daqueles que o mataram, através do sono.
+                </p>
+                <div class="botoes">
+                    <button class="botao botao-assistir" role="button">
+                        <i class="fas fa-play"></i>
+                        Assistir
+                    </button>
+                    <button class="botao botao-info" role="button">
+                        <i class="fas fa-info-circle"></i>
+                        Mais Informações
+                    </button>
+                </div>
+            </div>
+        </div>
 
+        <div class="trailer">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/nWdS1k7k6ZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="fechar">
+                <a href="">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="carrosel-filmes">
+            <div class="titulo-carrossel">
+                Minha Lista
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="assets/images/A Nightmare on Elm Street.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/The Exorcist.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Madrugada dos Mortos.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Halloween.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/O Chamado.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/O Grito (2004).jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Poltergeist.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/REC.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Sexta-Feira 13.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/The Shining.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Extermínio (2002).jpg">
+                </div>
+            </div>
+        </div>
+        
+        <div class="carrosel-filmes">
+            <div class="titulo-carrossel">
+                Continuar assistindo como Fulano
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="assets/images/Poltergeist.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/REC.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Sexta-Feira 13.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/The Shining.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Extermínio (2002).jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/A Nightmare on Elm Street.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/The Exorcist.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Madrugada dos Mortos.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/Halloween.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/O Chamado.jpg">
+                </div>
+                <div class="item">
+                    <img src="assets/images/O Grito (2004).jpg">
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-
+        Clone Netflix &reg;
     </footer>
 </body>
 </html>

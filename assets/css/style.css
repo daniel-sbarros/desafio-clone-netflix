@@ -1,30 +1,33 @@
 :root {
     --vermelha: #e50914;
     --preta: #141414;
+    --borda: 1px solid #fff;
 }
 
 * {
-    font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
+}
+
+.container {
+    margin: 0 60px;
+}
+
+.pg-select {
+    font-weight: 600;
 }
 
 body {
     background: var(--preta);
+    color: #fff;
 }
 
-.logo {
-    color: var(--vermelha);
-    font-family: "Arial Black";
-    text-transform: uppercase;
-}
-
-nav * {
-    line-height: 1.2em;
-    font-weight: 400;
+nav a {
     text-decoration: none;
+    color: white;
 }
 
 nav a:hover {
@@ -32,7 +35,7 @@ nav a:hover {
 }
 
 nav a:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 16px;
 }
 
 header .container {
@@ -40,4 +43,281 @@ header .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.esquerda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    position: static;
+}
+
+.esquerda nav {
+    display: block;
+}
+
+.direita a:not(:last-child) {
+    margin-right: 10px;
+}
+
+:is(.direita a, #navegar) {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    padding: 22px 0;
+    cursor: pointer;
+    width: 93px;
+    height: auto;
+    margin-right: 45px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/A\ Nightmare\ on\ Elm\ Street\ Wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+:is(.botao-info, .botao-assistir) {
+    padding: 8px 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.botao-info {
+    background-color: rgba(200, 200, 200, 0.3);
+    color: #fff;
+}
+
+.botao-assistir {
+    background-color: #fff;
+    color: #000;
+}
+
+:is(.botao-info, .botao-assistir):hover {
+    transition: .3s ease all;
+}
+
+.botao-info:hover {
+    background-color: white;
+    color: #141414;
+}
+
+.botao-assistir:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: #141414;
+}
+
+.botao i {
+    margin-right: 5px;
+}
+
+.carrosel-filmes {
+    padding: 30px;
+}
+
+#navegar {
+    display: none;
+}
+
+#navegar i {
+    margin-left: 5px;
+}
+
+.titulo-carrossel {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.trailer {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    background-color: var(--preta);
+    padding: 10px;
+
+    z-index: 2;
+    font-size: 50px;
+    border: 1px solid #000;
+    display: none;
+
+    box-shadow: 0 0 10px #f00;
+}
+
+.trailer .video {
+    position: static;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.trailer .video iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.trailer .fechar {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.trailer .fechar a {
+    text-decoration: none;
+    color: #c00 !important;
+}
+
+/*
+* Owl Carousel 
+* Modificar a posicão dos botões de navegação do Slider
+*/
+
+.owl-dots {
+    display: none;
+}
+
+:is(.owl-next, .owl-prev) {
+    position: absolute;
+    top: -5px;
+    width: 40px;
+    height: 100%;
+    font-size: 60px !important;
+    background-color: rgba(255, 255, 255, .2) !important;
+    display: none !important;
+}
+
+.owl-next {
+    right: -30px;
+}
+
+.owl-prev {
+    left: -30px;
+}
+
+.owl-carousel:hover :is(.owl-next, .owl-prev) {
+    display: block !important;
+}
+
+:is(.owl-next, .owl-prev):hover {
+    background: rgba(255, 255, 255, .4) !important;
+    color: var(--preta) !important;
+    transition: .3s ease all !important;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    background-color: #101010;
+}
+
+/* Responsividade */
+
+@media screen and (max-width:1920px) {
+    .filme-principal {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .filme-principal {
+        height: 400px;
+    }
+
+    .titulo-carrossel {
+        font-size: 20px;
+    }
+
+    .descricao {
+        font-size: 12px;
+    }
+
+    .filme-principal .titulo {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #navegar {
+        display: block;
+    }
+
+    .esquerda nav {
+        display: none;
+    }
+    
+    .esquerda nav .menu {
+        position: absolute;
+        top: 60px;
+        left: 120px;
+        background-color: rgba(0, 0, 0, .8);
+        width: 200px;
+        height: 200px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+        border-top: var(--borda);
+    }
+
+    .esquerda nav .menu a {
+        display: block;
+        cursor: pointer;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .esquerda nav .menu a:hover {
+        background-color: white;
+        color: var(--preta);
+        transition: .3s ease all;
+    }
 }
